@@ -28,4 +28,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=pass
       - MYSQL_DATABASE=noel-db
+    volumes:
+      - /mysql/initdb.d /docker-entrypoint-initdb.d/
     tty: True
